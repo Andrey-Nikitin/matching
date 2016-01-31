@@ -7,8 +7,11 @@ def data_comparison(data_list):
             average_data_list=sort_data_list[len(sort_data_list)/2]
 
         if data_list[0] !=0:
-	    print average_data_list, abs(average_data_list-data_list[0])/float(data_list[0])*100
+	    #print average_data_list, abs(average_data_list-data_list[0])/float(data_list[0])*100
             return abs(average_data_list-data_list[0])/float(data_list[0])*100
+	elif data_list[0]==0 and average_data_list !=0:
+	    print data_list 
+	    print "0,Ahtung!Ahtung!"
   
 if __name__=='__main__':
     a=[1,2,3]

@@ -1,3 +1,3 @@
 def processing_results(result):
-    if result > 5:
+    if result > 20:
         print "Ahtung!Ahtung!"
