@@ -1,28 +1,17 @@
-def average(values):
-    """
-Printing average array.
-example:
-        average(values), where values = [1,3,4,5]
-    """
-    
-    return sum(values)/len(values)
+def data_comparison(data_list):
+    if data_list:
+        sort_data_list=sorted(data_list)
+        if len(sort_data_list)%2 == 0:
+            average_data_list=(sort_data_list[len(sort_data_list)/2]+sort_data_list[len(sort_data_list)/2-1])/2
+        else:
+            average_data_list=sort_data_list[len(sort_data_list)/2]
 
-def matching(values):
-    """
-matching values[0] and average(values), output percentage
-example:
-        matching(values) #where values=[1,3,4,5]
-        >> 250        
-    """
-    return abs(average(values)-values[0])/float(values[0])*100
+        if data_list[0] !=0:
+	    print average_data_list, abs(average_data_list-data_list[0])/float(data_list[0])*100
+            return abs(average_data_list-data_list[0])/float(data_list[0])*100
   
-def seach(values):
-    if values != None and type(values[0]) == list:
-        return matching(values)
-
-
 if __name__=='__main__':
     a=[1,2,3]
-    print seach(a)
+    print data_comparison(a)
     
 
